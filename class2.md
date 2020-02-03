@@ -202,12 +202,12 @@ In your code, you will now see an action. This function will now be executed eve
 
 Select one of the image view elements. Click control and drag across to the view controller file. 
 
-![](https://i.imgur.com/JfpbB41.png)
+![](https://i.imgur.com/Pt2cKK7.png)
 
 Let's give our image view a name like "imageView1". Ensure the type is "UIImageView". Click "Connect".
 
 ![](https://i.imgur.com/eDvZDSB.png)
-![](https://i.imgur.com/4FxNZIX.png)
+![](https://i.imgur.com/kF8lOTv.png)
 
 ### Exercise
 
