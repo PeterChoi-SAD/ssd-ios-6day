@@ -132,7 +132,7 @@ You should end up with something like this:
 
 Now that we have our UIImageView elements in our view, let's add some image assets.
 
-You can get the image assets for this class [here](https://github.com/BCIT-SSD-iOS/bcit_ssd_ios/blob/master/class2Assets/slotMasterAssets.zip)
+You can get the image assets for this class [here](https://github.com/philweier/ssd-ios-6day/blob/master/class2Assets/slotMasterAssets.zip)
 
 Open the downloaded folder, select all files, and drag them to the Assets.xcassets folder in your Navigator panel.
 
