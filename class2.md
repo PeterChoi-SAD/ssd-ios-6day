@@ -284,4 +284,4 @@ Create a Rock Paper Scissors game.
 <br />
 <img src="https://i.imgur.com/MZqPGbh.png" width="250" />
 
-Get the image assets for this project [here](https://github.com/BCIT-SSD-iOS/bcit_ssd_ios/blob/master/class2Assets/rockPaperScissorsAssets.zip)
+Get the image assets for this project [here](https://github.com/philweier/ssd-ios-6day/blob/master/class2Assets/rockPaperScissorsAssets.zip)
