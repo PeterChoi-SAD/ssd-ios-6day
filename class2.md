@@ -186,7 +186,7 @@ Let's start by changing our XCode layout in order to make this easier to do. Cli
 
 You should see the ViewController.swift file in the right-hand editor.
 
-![](https://i.imgur.com/1Jo9vRp.png)
+![](https://i.imgur.com/V657XfM.png)
 
 Select your button in IB. Click control and drag over to your view controller file
 
