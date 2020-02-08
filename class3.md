@@ -11,7 +11,8 @@
 9. [ Multiple Screens ](#9)
 10. [ Passing Data to Another View Controller ](#10)
 11. [ Building out the RecipeDetailViewController ](#11)
-12. [ Assignment ](#12)
+12. [ Auto Layout ](#12)
+13. [ Assignment ](#13)
 
 <a name="1"></a>
 ## 1) Introduction
@@ -363,7 +364,80 @@ Your solution will look end up looking something like this:
 <img src="https://i.imgur.com/GSJAgyT.png" width="250" />
 
 <a name="12"></a>
-## 12) Assignment
+## 12) Auto Layout
+
+A slightly more complex use case for Auto Layout will come tomorrow, but if you segue into the detail screen of a recipe and rotate the device to landscape you will see that the image is no longer centered and full-width:
+
+![](https://i.imgur.com/atCmDUI.png)
+
+Recall from our Slot Master app that when we viewed our app in any screen size different from iPhone 8, it appeared skewed.
+
+We're going to apply auto layout constraints to our view elements in order to make them look great on any screen size and orientation.
+
+There are 2 different approaches when applying auto layout:
+
+### Pinning
+
+![](https://i.imgur.com/8iUWE8W.png)
+
+<img src="https://i.imgur.com/voaYxUb.png" width="300" />
+
+
+#### Pinning with Explicit Width and Height Constraints
+
+![](https://i.imgur.com/YPMKNFA.png)
+
+<img src="https://i.imgur.com/ORvlcMi.png" width="300" />
+
+
+### Alignment
+
+Our element will have width and height constraints, as well as alignment constraints (centered vertically and horizontally for instance)
+
+![](https://i.imgur.com/Z0gM77n.png)
+
+![](https://i.imgur.com/PuXCvgy.png)
+
+<img src="https://i.imgur.com/A33iFVK.png" width="300" />
+
+
+### Adding Constraints to our Recipe
+
+In this example we will only need pinning and size constraints. If we had view elements that were smaller than the width/height of the view we may need alignment, we will see this next class when we build a chat app.
+
+Let's start by pinning the image to the top and sides of our view:
+
+![](https://i.imgur.com/8WUgcbM.png)
+
+If you run your simulator (or click on the red circle at the top level of your Scene) you will see that we are missing some constraints to manage our image view.
+
+![](https://i.imgur.com/8KRJ1pH.png)
+
+Add a height constraint to the ImageView:
+
+![](https://i.imgur.com/hsyzyir.png)
+
+![](https://i.imgur.com/yjp30lM.png)
+
+### Exercise
+Anytime that you are assigning constraints to a UIImageView, it is important to test to see how the image is rendered. Different images can allow for changes to their aspect ratio or positioning within their container.
+Select the your Recipe Image View and play with the Content Mode (found in the attributes inspector).
+
+How does the image look when you select Scale to Fill or Aspect Fit vs Aspect Fill?
+
+![](https://i.imgur.com/rJD432P.png)
+
+
+### Add Additional Constraints to Label and Table View
+Now that our image is pinned, we can add additional constraints to all other elements in the view.
+
+### Exercise
+Add constraints to the steps label and table view so that your application has the same constraints seen in the following image:
+
+![](https://i.imgur.com/RM68TnS.png)
+
+<a name="13"></a>
+## 13) Assignment
 
 Create a Book Tracker app. This app shows a listing of books you've read, and shows a detail view of each book and your thoughts about it.
 
@@ -378,3 +452,22 @@ Your app should have the following:
     * Your Notes (as a String Optional)
 * A root view controller that manages a listing (table) of your books. You can hard code the book data (for now until we learn more about persistent storage).
 * A detail view controller that manages a detail view of each book. The detail view should show the book cover image, title, isbn, author, your rating and your notes.
+* Auto layout is not required for this assignment.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
