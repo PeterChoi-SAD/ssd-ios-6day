@@ -223,7 +223,7 @@ Our element will have width and height constraints, as well as alignment constra
 
 ### Adding Constraints to our Buttons
 
-We start by adding a new container view, and dragging our buttons inside it.
+We start by adding a new view, and dragging our buttons inside it.
 
 <img src="https://i.imgur.com/NRGIr8j.png" width="250" />
 
