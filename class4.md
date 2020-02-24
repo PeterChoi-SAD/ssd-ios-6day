@@ -4,16 +4,15 @@
 2. [ Getting Started ](#2)
 3. [ CocoaPods ](#3)
 4. [ Cloud Storage with Firebase ](#4)
-5. [ Model View Controller ](#5)
-6. [ The Chatee Interface ](#6)
-7. [ Auto Layout ](#7)
-8. [ Multiple Screens ](#8)
-9. [ Authenticating Users with Firebase ](#9)
-10. [ Performing a Segue Programmatically ](#10)
-11. [ Setting up the ChatViewController ](#11)
-12. [ Animating the Keyboard ](#12)
-13. [ Gesture Recognizers ](#13)
-14. [ Assignment ](#14)
+5. [ The Chatee Interface ](#5)
+6. [ Auto Layout ](#6)
+7. [ Multiple Screens ](#7)
+8. [ Authenticating Users with Firebase ](#8)
+9. [ Performing a Segue Programmatically ](#9)
+10. [ Setting up the ChatViewController ](#10)
+11. [ Animating the Keyboard ](#11)
+12. [ Gesture Recognizers ](#12)
+13. [ Assignment ](#13)
 
 <a name="1"></a>
 ## 1) Introduction
@@ -165,8 +164,8 @@ override func viewDidLoad() {
 ```
 Run your application in a simulator and check your database as the value Test should have been written to the main node of your Realtime Database.
 
-<a name="6"></a>
-## 6) The Chatee Interface
+<a name="5"></a>
+## 5) The Chatee Interface
 
 Our Chatee app is going to need 4 screens; a welcome screen, a login screen, a registration screen, and the screen where a user can send and receive messages.
 
@@ -184,8 +183,8 @@ Create a file called WelcomeViewController.swift (sublcass of UIViewController).
 
 Don't forget to set your view controller's class to WelcomeViewController in the identity inspector. You can delete the default ViewController.swift class as we won't be using it.
 
-<a name="7"></a>
-## 7) Auto Layout
+<a name="6"></a>
+## 6) Auto Layout
 
 Here are our buttons on the iPhone SE sized screen.
 
@@ -242,8 +241,8 @@ You can view the constraints for any element in the Size Inspector.
 
 ![](https://i.imgur.com/4poZq27.png)
 
-<a name="8"></a>
-## 8) Multiple Screens
+<a name="7"></a>
+## 7) Multiple Screens
 
 When a user clicks one of our buttons, we want to show the correct screen. Let's start by adding a new View Controller to our storyboard by using the Object Library.
 
@@ -287,8 +286,8 @@ Your solution might look something like this:
 
 ![](https://i.imgur.com/LEl3NLm.png)
 
-<a name="9"></a>
-## 9) Authenticating Users with Firebase
+<a name="8"></a>
+## 8) Authenticating Users with Firebase
 
 Let's actually start authenticating users using Firebase and storing them in our cloud db.
 
@@ -373,8 +372,8 @@ In Firebase under Authentication we can see our new user!
 
 Ideally, once a user has successfully registered or logged in, we want to send them to an actual messaging screen so they can chat.
 
-<a name="10"></a>
-## 10) Performing a Segue Programmatically
+<a name="9"></a>
+## 9) Performing a Segue Programmatically
 
 Let's add a ChatViewController and segue from the RegistrationViewController.
 
@@ -403,8 +402,8 @@ Complete the LoginViewController.
 
 (20 mins)
 
-<a name="11"></a>
-## 11) Setting up the ChatViewController
+<a name="10"></a>
+## 10) Setting up the ChatViewController
 
 ### Exercise
 
@@ -685,8 +684,8 @@ Finally, add the logic to populate the messages in the table using our custom ce
 
 Go ahead and run your app on multiple simulators and try it out!
 
-<a name="12"></a>
-## 12) Animating the Keyboard
+<a name="11"></a>
+## 11) Animating the Keyboard
 
 If we leave our app as it is now, the keyboard will obstruct our textfield view and button. We need to move these up when the keyboard opens.
 
@@ -722,8 +721,8 @@ func textFieldDidEndEditing(_ textField: UITextField) {
 <img src="https://i.imgur.com/38cnw3y.png" width="250" />
 Now our keyboard pushes our textfield up so we can still access the Send button. The only problem now is that we can't close the keyboard. To do this, we'll need to use a gesture recognizer.
 
-<a name="13"></a>
-## 13) Gesture Recognizers
+<a name="12"></a>
+## 12) Gesture Recognizers
 
 Gesture Recognizers allow you to watch for gestures on designated views in order to do something in response.
 
@@ -744,8 +743,8 @@ Now add the following method at the end of the ChatViewController.
 ```
 Note: the `@objc` makes this method available to objective c APIs
 
-<a name="14"></a>
-## 14) Assignment
+<a name="13"></a>
+## 13) Assignment
 
 Try running through the notes again on your own and rebuild your own Chatee app. Thoroughly read through and understand all the code in the ChatViewController.
 
