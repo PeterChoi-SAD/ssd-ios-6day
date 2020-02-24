@@ -152,6 +152,18 @@ Complete the Firebase project setup by running your app to test the connection t
 Be sure to start in test mode:
 ![](https://i.imgur.com/nlTpytg.png)
 
+### Test your Database Connection
+Test your database by overwritting your `ViewController.swift` viewDidLoad function:
+```swift
+override func viewDidLoad() {
+    super.viewDidLoad()
+    // Do any additional setup after loading the view.
+    var ref: DatabaseReference!
+    ref = Database.database().reference()
+    ref.setValue("Test")
+  }
+```
+Run your application in a simulator and check your database as the value Test should have been written to the main node of your Realtime Database.
 
 <a name="6"></a>
 ## 6) The Chatee Interface
