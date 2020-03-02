@@ -339,7 +339,7 @@ You can use MARK comments to organize your files, and navigate to a section of y
 
 We can use extensions to break up our larger files into smaller pieces without actually breaking up the class.
 
-Add the following code at the end of the file and remove `UISearchBarDelegate` from the initial declaration. This pattern gives us more flexibility for organizing our code, and still playing nicely with the Cocoa Touch brand of MVC (our controllers become large quickly).
+Add the following code at the end of the file and remove `SwipeTableViewCellDelegate` from the initial declaration. This pattern gives us more flexibility for organizing our code, and still playing nicely with the Cocoa Touch brand of MVC (our controllers become large quickly).
 
 ```swift
 extension ItemListViewController: SwipeTableViewCellDelegate {
