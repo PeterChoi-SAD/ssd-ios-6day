@@ -275,7 +275,7 @@ Have our ItemListViewController conform to the SwipeTableViewCellDelegate protoc
 
 ![](https://i.imgur.com/tLa8W0c.png)
 
-Add a trash can asset. You can find one called trash.png in your assignment repo. Our trash can is very small so we can use one size and drag it into the 2x position.
+Add a trash can asset. You can find one called trash.png in today's [asset zip](https://github.com/philweier/ssd-ios-6day/blob/master/class4Assets.zip) . Our trash can is very small so we can use one size and drag it into the 2x position.
 
 ![](https://i.imgur.com/WL6qdO6.png)
 
