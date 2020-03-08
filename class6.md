@@ -254,7 +254,7 @@ There are 5 different pieces of data we need to construct a well formed request 
 
 **1) Base url**
 
-`http://api.imagga.com/v1`
+`http://api.imagga.com/v2`
 
 **2) Our authorization token**
 
@@ -286,7 +286,7 @@ import Alamofire
 public enum ImaggaRouter: URLRequestConvertible {
 
     enum Constants {
-        static let baseURL = "https://api.imagga.com/v1"
+        static let baseURL = "https://api.imagga.com/v2"
         static let authorizationToken = "Basic <YOUR AUTH TOKEN HERE>"
     }
 
@@ -306,9 +306,9 @@ public enum ImaggaRouter: URLRequestConvertible {
     var path: String {
         switch self {
         case .upload:
-            return "/content"
+            return "/uploads"
         case .tags:
-            return "/tagging"
+            return "/tags"
         case .colors:
             return "/colors"
         }
@@ -317,9 +317,9 @@ public enum ImaggaRouter: URLRequestConvertible {
     var parameters: [String: Any] {
         switch self {
         case .tags(let contentID):
-            return ["content": contentID]
+            return ["image_upload_id": contentID]
         case .colors(let contentID):
-            return ["content": contentID, "extract_object_colors": 0]
+            return ["image_upload_id": contentID, "extract_object_colors": 0]
         default:
             return [:]
         }
@@ -377,7 +377,7 @@ class ImaggaAPI {
         Alamofire.upload(
             multipartFormData: { multipartFormData in
                 // build the multipart form data
-                multipartFormData.append(imageData, withName: "imagefile", fileName: "image.jpg", mimeType: "image/jpg")
+                multipartFormData.append(imageData, withName: "image", fileName: "image.jpg", mimeType: "image/jpg")
             },
             // ImaggaRouter.upload encoding result block
             with: ImaggaRouter.upload
@@ -405,7 +405,7 @@ class ImaggaAPI {
                     // our request was successful (200)
 
                     // grab the upload id from the result
-                    let uploadedImageID = JSON(value)["uploaded"][0]["id"].stringValue
+                    let uploadedImageID = JSON(value)["result"]["upload_id"].stringValue
                     print("Image uploaded with ID: \(uploadedImageID)")
 
                     // call downloadTags with our upload id
@@ -446,8 +446,8 @@ class ImaggaAPI {
 
                 // success!
                 // get the tags from the response
-                let tags = JSON(value)["results"][0]["tags"].array?.map { json -> String in
-                    json["tag"].stringValue
+                let tags = JSON(value)["result"]["tags"].array?.map { json -> String in
+                    json["tag"]["en"].stringValue
                 }
 
                 // call the completion function and pass the tags
@@ -475,7 +475,7 @@ class ImaggaAPI {
                 // success!
                 // get the colors from the response
                 // create a ImageColor object for each set of color data we've recieved
-                let photoColors = JSON(value)["results"][0]["info"]["image_colors"].array?.map { json -> ImageColor in
+                let photoColors = JSON(value)["result"]["colors"]["image_colors"].array?.map { json -> ImageColor in
                     ImageColor(red: json["r"].intValue,
                                green: json["g"].intValue,
                                blue: json["b"].intValue,
