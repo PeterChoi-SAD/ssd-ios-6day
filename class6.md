@@ -695,6 +695,10 @@ Add the following property to the top of the class.
 let reuseIdentifier = "imageCell"
 ```
 
+If the imageCell layout is skewed:
+
+<img src="https://i.imgur.com/ED2KoSZ.png" width="300" />
+
 <a name="13"></a>
 ## 13) Showing the Image Detail
 
