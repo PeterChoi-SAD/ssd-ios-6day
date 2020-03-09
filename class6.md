@@ -164,8 +164,9 @@ We would like our image loader screen to slide up from below. To achieve this we
 
 Create a new segue from the `ImageCollectionViewController` to our new controller. Choose "Present Modally".
 
-![](https://i.imgur.com/U65NU4q.png)
 ![](https://i.imgur.com/hWWXi7P.png)
+
+![](https://i.imgur.com/U65NU4q.png)
 
 Give the segue an identifier called "showImageLoader".
 
